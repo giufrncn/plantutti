@@ -1,0 +1,44 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@import"../base/variables.scss";
+
+/*.parallax2 {
+    position: relative;
+    img {
+        position: absolute;
+        opacity: 0.6;
+    }
+}*/
+body {
+    font-family: 'Noto Sans TC', sans-serif;
+    background-color: nth($colores, 1);
+    background-image: url(/img/parallax2editada.png);
+    background-size: cover;
+    -moz-background-size: cover;
+    -webkit-background-size: cover;
+    -o-background-size: cover;
+}
+.container {  display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 3fr 2fr 1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "header header header"
+      "main main main"
+      "article article article"
+      "footer footer footer";
+  }
+  
+  .main { grid-area: main; }
+  
+  .header { grid-area: header; }
+  
+  .article { grid-area: article; }
+  
+  .footer { grid-area: footer; }
+  
